@@ -21,13 +21,13 @@ Esta API permite realizar cálculos con porcentaje dinámico, obteniéndolo desd
 - **La imagen se encuentra en ** [https://hub.docker.com/r/rcarlosgr/calculation-api](https://hub.docker.com/r/rcarlosgr/calculation-api)
 
 ### Clonar el repositorio y ejecutar manualmente
-```bash
+```text
 git clone https://github.com/rcarlosgr/challenge-tenpo.git
 cd challenge-tenpo
 ```
 
 ### Ejecutar docker compose
-```bash
+```text
 docker compose up -d
 ```
 ---
