@@ -15,7 +15,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   api:
-    build: .
+    image: rcarlosgr/calculation-api:latest
     container_name: postgres-tenpo-api
     restart: always
     ports:
