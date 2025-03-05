@@ -1,6 +1,7 @@
 package com.tenpo.challenge_tenpo.services.impl;
 
 import com.github.benmanes.caffeine.cache.Cache;
+import com.tenpo.challenge_tenpo.exceptions.BadRequestException;
 import com.tenpo.challenge_tenpo.services.ExternalPercentageService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,7 @@ public class ExternalPercentageServiceImpl implements ExternalPercentageService 
             if (cachedPercentage != null) {
                 return cachedPercentage;
             }
-            throw new RuntimeException("No se pudo obtener el porcentaje y no hay valores en caché.");
+            throw new BadRequestException("No se pudo obtener el porcentaje y no hay valores en caché.");
         }
     }
 

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tenpo.challenge_tenpo.dtos.calculation.CalculationRequest;
 import com.tenpo.challenge_tenpo.dtos.calculation.CalculationResponse;
+import com.tenpo.challenge_tenpo.exceptions.BadRequestException;
 import com.tenpo.challenge_tenpo.services.ApiCallHistoryService;
 import com.tenpo.challenge_tenpo.services.CalculationService;
 import com.tenpo.challenge_tenpo.services.ExternalPercentageService;
@@ -34,7 +35,7 @@ public class CalculationServiceImpl implements CalculationService {
             error = e.getMessage();
             response = null;
             apiCallHistoryService.save(endpoint, parameters, response, error);
-            throw new RuntimeException("Error en el cálculo");
+            throw new BadRequestException("Error en el cálculo");
         }
 
 
