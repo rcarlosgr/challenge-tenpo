@@ -2,9 +2,9 @@ spring:
   application:
     name: challenge-tenpo
   datasource:
-    url: jdbc:postgresql://localhost:5432/challenge_tenpo
-    username: postgres
-    password: carlosgr
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:validate}
