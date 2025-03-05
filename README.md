@@ -30,6 +30,8 @@ cd challenge-tenpo
 ```text
 docker compose up -d
 ```
+
+![img.png](img.png)
 ---
 
 ## 📌 Endpoints de la API
