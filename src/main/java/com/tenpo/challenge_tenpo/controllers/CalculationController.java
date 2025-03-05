@@ -18,7 +18,7 @@ public class CalculationController {
 
     @PostMapping("/sum")
     public ResponseEntity<CalculationResponse> calculate(@RequestBody CalculationRequest request) {
-        double result = calculationService.calculateSumWithPercentage(request.getNum1(), request.getNum2());
-        return ResponseEntity.ok(new CalculationResponse(result));
+        CalculationResponse resp = calculationService.calculateSumWithPercentage(request);
+        return ResponseEntity.ok(resp);
     }
 }

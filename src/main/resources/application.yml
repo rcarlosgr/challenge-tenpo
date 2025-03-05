@@ -1,5 +1,10 @@
 spring:
   application:
     name: challenge-tenpo
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/challenge_tenpo
+    username: postgres
+    password: carlosgr
+  jpa:
+    hibernate:
+      ddl-auto: update

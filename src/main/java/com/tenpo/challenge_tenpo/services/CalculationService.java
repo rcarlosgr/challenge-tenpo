@@ -1,5 +1,8 @@
 package com.tenpo.challenge_tenpo.services;
 
+import com.tenpo.challenge_tenpo.dtos.calculation.CalculationRequest;
+import com.tenpo.challenge_tenpo.dtos.calculation.CalculationResponse;
+
 public interface CalculationService {
-    double calculateSumWithPercentage(double num1, double num2);
+    CalculationResponse calculateSumWithPercentage(CalculationRequest request);
 }
